@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="container w-50 mt-4">
+  <div class="card text-center">
+
+    <div class="card-header">
+      <h1 class="text-center text-black-50">Calcular Média</h1>
+    </div>
+    <div class="card-body text-secondary">
+      <form method="GET" action="/">
+        <div class="mb-3">
+          <input class="form-control" type="text" name="number1" placeholder="Digite o primeiro número" required>
+        </div>
+
+        <div class="mb-3">
+          <input class="form-control" type="text" name="number2" placeholder="Digite o segundo número" required>
+        </div>
+
+        <div class="d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary"> Calcular média </button>
+        </div>
+      </form>
+
+      <div class="justify-content text-center">
+        <% if(media) { %>
+          <p class="badge bg-secondary text-wrap text-center fs-5 mt-4 p-3"> Média: <%= media %> </p>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

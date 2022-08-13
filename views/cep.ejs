@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="container w-50 mt-4">
+  <div class="card text-center">
+
+    <div class="card-header">
+      <h1 class="text-center text-black-50">Buscar CEP</h1>
+    </div>
+    <div class="card-body text-secondary">
+      <form method="GET" action="/">
+        <div class="mb-3">
+          <input class="form-control" type="text" name="number1" placeholder="Digite o CEP" required>
+        </div>
+
+        <div class="d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary"> Buscar CEP </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
