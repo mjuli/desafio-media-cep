@@ -10,11 +10,11 @@
     <div class="card-body text-secondary">
       <form method="GET" action="/">
         <div class="mb-3">
-          <input class="form-control" type="text" name="number1" placeholder="Digite o primeiro número" required>
+          <input class="form-control" type="text" name="number1" id="number1" placeholder="Digite o primeiro número" required>
         </div>
 
         <div class="mb-3">
-          <input class="form-control" type="text" name="number2" placeholder="Digite o segundo número" required>
+          <input class="form-control" type="text" name="number2" id="number2" placeholder="Digite o segundo número" required>
         </div>
 
         <div class="d-md-flex justify-content-md-end">
@@ -24,8 +24,12 @@
 
       <div class="justify-content text-center">
         <% if(media) { %>
-          <p class="badge bg-secondary text-wrap text-center fs-5 mt-4 p-3"> Média: <%= media %> </p>
+          <p class="alert alert-secondary mt-4"> Média: <%= media %> </p>
         <% } %>
+
+        <% err.map(alert => { %>
+          <p class="alert alert-danger mt-4"> <%= alert %> </p>
+        <% }) %>
       </div>
     </div>
   </div>
