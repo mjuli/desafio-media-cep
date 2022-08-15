@@ -8,7 +8,7 @@
       <h1 class="text-center text-black-50">Buscar CEP</h1>
     </div>
     <div class="card-body text-secondary">
-      <form method="GET" action="/buscarcep">
+      <form method="GET" action="/buscarcep" id="cep-form">
         <div class="mb-3">
           <input class="form-control" type="text" name="cep" placeholder="Digite o CEP" pattern="\d{5}-?\d{3}" required title="Formatos válidos: 12345-678 ou 12345678">
         </div>
@@ -25,7 +25,7 @@
             <% if(endereco.cep) { %> <p class="mb-0"> CEP: <%= endereco.cep %> </p> <% } %>
             <% if(endereco.logradouro) { %> <p class="mb-0"> Logradouro: <%= endereco.logradouro %> </p> <% } %>
             <% if(endereco.complemento) { %> <p class="mb-0"> Complemento: <%= endereco.complemento %> </p> <% } %>
-            <% if(endereco.bairro) { %> <p class="mb-0"> Bairro: <%= endereco.bairro %></p> <% } %>
+            <% if(endereco.bairro) { %> <p class="mb-0"> Bairro: <%= endereco.bairro %> </p> <% } %>
             <% if(endereco.localidade) { %> <p class="mb-0"> Cidade: <%= endereco.localidade %> </p> <% } %>
             <% if(endereco.uf) { %> <p class="mb-0"> Estado: <%= endereco.uf %> </p> <% } %>
           </div>
