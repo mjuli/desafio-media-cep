@@ -15,6 +15,12 @@
 
 `npm start`
 
+No navegador: 
+
+`http://localhost:8080/media` 
+
+`http://localhost:8080/buscarcep` 
+
 ## Testes
 
 `npm test`
