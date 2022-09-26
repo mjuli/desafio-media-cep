@@ -23,7 +23,7 @@ app.get('/media', (req, res) => {
         err.push("Informe um número válido no SEGUNDO campo!")
     }
 
-    console.warn(`GET / - Calcular média:
+    console.info(`GET / - Calcular média:
       firstNumber: ${firstNumber}
       secondNumber: ${secondNumber}
       media: ${media}
@@ -44,7 +44,7 @@ app.get('/buscarcep', async(req, res) => {
     if(cep){
       cep = cep.replace(/-/, '')
 
-      const validacep = /^[0-9]{8}$/
+      const validacep = /^\d{8}$/
 
       if(validacep.test(cep)){
         const url = `https://viacep.com.br/ws/${cep}/json`
@@ -61,7 +61,7 @@ app.get('/buscarcep', async(req, res) => {
     if(cep && (!endereco || endereco.erro))
       warn = "CEP inválido"
 
-    console.warn(`GET /buscarcep - Buscar CEP:
+    console.info(`GET /buscarcep - Buscar CEP:
       cep: ${cep},
       endereco: ${JSON.stringify(endereco)},
       warn: ${warn}`)
