@@ -1,5 +1,5 @@
-import request from 'supertest'
-import app from '../server'
+const request = require('supertest')
+const app = require('../server')
 
 describe('GET /media', () => {
   const URL = '/media'
