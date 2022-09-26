@@ -16,4 +16,4 @@ jobs:
         with:
           expo-version: 4.x
       - run: npm i
-      - run: npm jest
+      - run: npm test
